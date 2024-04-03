@@ -21,7 +21,6 @@ class ToDoItem extends StatelessWidget {
       child: Slidable(
         endActionPane: ActionPane(
           motion: const ScrollMotion(),
-          dismissible: DismissiblePane(onDismissed: () {}),
           children: [
             SlidableAction(
               onPressed: (_) => onToDoDeleted(todoItem.id),
@@ -55,26 +54,6 @@ class ToDoItem extends StatelessWidget {
               decoration: todoItem.isDone ? TextDecoration.lineThrough : null,
             ),
           ),
-          // trailing: Container(
-          //   padding: const EdgeInsets.all(0),
-          //   margin: const EdgeInsets.symmetric(vertical: 12),
-          //   height: 35,
-          //   width: 35,
-          //   decoration: BoxDecoration(
-          //     color: tdRed,
-          //     borderRadius: BorderRadius.circular(5),
-          //   ),
-          //   child: IconButton(
-          //     onPressed: () {
-          //       onToDoDeleted(todoItem.id);
-          //     },
-          //     color: tdWhite,
-          //     iconSize: 18,
-          //     icon: const Icon(
-          //       Icons.delete,
-          //     ),
-          //   ),
-          // ),
         ),
       ),
     );
